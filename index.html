@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-ng-app="app.ex">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exemplo rotas e estrutura</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Exemplo de estrtura e uso de rotas">
+        <meta name="keywords" content="Angular, JS, ngRoute">
+        <meta name="author" content="Denner Evaldt Machado">
+
+        <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+        <!-- Diretiva nav -->
+        <ui-nav></ui-nav>
+
+    	<!-- ngView: Onde irá renderizar todas "partials views" -->
+    	<!-- autoscroll [true]: Toda partial aberta irá inicializar no topo da mesma -->
+    	<div ng-view autoscroll="true"></div>
+
+        <!-- Diretiva footer -->
+        <ui-footer></ui-footer>
+        	
+        <!-- jQuery -->
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap js -->
+        <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- NgFiles -->
+        <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+        
+        <!-- Module APP -->
+        <script type="text/javascript" src="app/app.module.js"></script>
+
+        <!-- Module Home -->
+        <script type="text/javascript" src="app/home/home.module.js"></script>
+        <script type="text/javascript" src="app/home/home.config.route.js"></script>
+        <script type="text/javascript" src="app/home/controller/home.controller.js"></script>
+        <script type="text/javascript" src="app/home/service/home.service.js"></script>
+        
+        <!-- Directives -->
+        <script type="text/javascript" src="app/layout/nav/nav.js"></script>
+        <script type="text/javascript" src="app/layout/footer/footer.js"></script>
+    </body>
+</html>
