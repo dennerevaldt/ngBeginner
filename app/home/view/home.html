@@ -1,0 +1,40 @@
+<div class="container" style="margin-top: 100px;">
+	<div class="col-md-12 text-center">
+		<!-- Forma num. 1 de mostrar os dados -->
+		<h2>{{vm.title}}</h2>
+		<!-- Forma num. 2 de mostrar os dados -->
+		<p data-ng-bind="vm.message"></p>
+	</div>
+</div>
+
+<div class="container mtp mbt">
+	<div class="col-md-12">
+		<!-- Cria-se um model, com a propriedade name que será o filtro na lista -->
+		<input type="text" class="form-control" placeholder="Filtrar itens" data-ng-model="search.name">
+	</div>
+</div>
+
+<div class="container">
+	<div class="col-md-12">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Nome</th>
+					<th>Preço R$</th>
+				</tr>
+			</thead>
+		
+			<tbody>
+				<!-- Listando as frutas -->
+				<!-- Filtra-se a lista pelo objeto search, que contera a propriedade name -->
+				<!-- também presente nas propriedades dos itens na lista "fruits" -->
+				<tr data-ng-repeat="item in vm.fruits | filter: search">
+					<td data-ng-bind="$index+1"></td>
+					<td data-ng-bind="item.name"></td>
+					<td data-ng-bind="item.price"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
